@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="facebook_app_id">3099640343528143</string>
+    <string name="fb_login_protocol_scheme">fb3099640343528143</string>
+    <string name="facebook_client_token">5945b1880fa46d08f653c4f529b70558</string>
+    <string name="default_web_client_id">24908030801-gbsrah6ah9qlupla3l8nu26pmv31h3sg.apps.googleusercontent.com</string> <!-- Потрібен новий із google-services.json -->
+</resources>
