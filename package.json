@@ -1,0 +1,25 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pechenka1234/MyAppAndr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pechenka1234/MyAppAndr/issues"
+  },
+  "homepage": "https://github.com/Pechenka1234/MyAppAndr#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "firebase-admin": "^13.4.0"
+  }
+}

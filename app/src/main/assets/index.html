@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 16px;
+            max-width: 400px;
+            margin: auto;
+            background-color: #f5f5f5;
+        }
+        select, input, button {
+            margin: 8px 0;
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1976D2;
+        }
+        #result {
+            font-size: 18px;
+            text-align: center;
+            font-weight: bold;
+            padding-top: 8px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<input type="number" id="amountInput" placeholder="Enter amount">
+<select id="fromCurrency">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="PLN">PLN</option>
+    <option value="UAH">UAH</option>
+</select>
+<select id="toCurrency">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="PLN">PLN</option>
+    <option value="UAH">UAH</option>
+</select>
+<button onclick="convert()">Convert</button>
+<div id="result">Result: 0.00</div>
+<script>
+    const exchangeRates = {
+        "USD": 1.0,
+        "EUR": 0.92,
+        "GBP": 0.79,
+        "PLN": 4.0,
+        "UAH": 41.0
+    };
+
+    function convert() {
+        const amount = parseFloat(document.getElementById("amountInput").value) || 0.0;
+        const fromCurrency = document.getElementById("fromCurrency").value;
+        const toCurrency = document.getElementById("toCurrency").value;
+        const fromRate = exchangeRates[fromCurrency];
+        const toRate = exchangeRates[toCurrency];
+        const convertedAmount = amount * (toRate / fromRate);
+        document.getElementById("result").innerText = `Result: ${convertedAmount.toFixed(2)} ${toCurrency}`;
+    }
+</script>
+</body>
+</html>
